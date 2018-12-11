@@ -1,0 +1,130 @@
+% !TeX spellcheck = de_CH
+
+% ========================================
+% Thesis template by Michael Wieland
+% Template version: v1.0
+% ========================================
+
+	
+% Document
+% ====================
+\documentclass[11pt, a4paper, oneside, titlepage]{memoir}
+
+% Package Imports
+% ====================
+\input{packages}
+
+% Document Information
+% ====================
+\newcommand\thesisAuthorA{Author A}
+\newcommand\thesisAuthorB{Author B}
+\newcommand\thesisTitle{Titel}
+\newcommand\thesisSubject{Bachelorarbeit}
+\newcommand\thesisUniversity{Hochschule für Technik Rapperswil}
+\newcommand\thesisDepartment{Abteilung für Informatik}
+\newcommand\thesisAdvisor{Betreuer}
+\newcommand\thesisExpert{Experte}
+\newcommand\thesisCounterreader{Gegenleser}
+\newcommand\thesisKeywords{java, hsr}
+\newcommand\thesisPeriod{Zeitraum: 19.02.2018 - 15.06.2018}
+\newcommand\footerTitle{ABC}
+
+\hypersetup{
+	pdfauthor={\thesisAuthorA, \thesisAuthorB},
+	pdftitle={\thesisTitle},
+	pdfsubject={\thesisSubject},
+	pdfkeywords={\thesisKeywords}
+}
+
+% Settings
+% ====================
+\input{settings/theoremsetup}
+\input{settings/macrosetup}
+\input{settings/layoutsetup}
+
+\begin{document}
+
+\frontmatter  % Roman page numbering
+ 
+% Front page
+% ====================
+\input{front}
+
+% Abstract
+% ====================
+\input{chapters/abstract}
+\input{chapters/management-summary}
+\input{chapters/acknowledgements}
+
+% Table of contents
+% ====================
+\cleartorecto
+\begin{KeepFromToc}
+	\tableofcontents
+\end{KeepFromToc}
+
+% Glossary
+% ====================
+\cleardoublepage
+\printglossary[title=Glossar und Abkürzungsverzeichnis]
+
+% List of figures
+% ====================
+\cleardoublepage
+\listoffigures
+
+% List of tables
+% ====================
+\cleardoublepage
+\listoftables
+
+\mainmatter  % Arabic page numbering
+
+% Chapters
+% ====================
+\part{Technischer Bericht}
+\input{chapters/technical-report}
+
+\part{Projektdokumentation}
+\input{chapters/requirements-analysis}
+
+\input{chapters/design-specification}
+
+\input{chapters/project-management}
+
+% Appendix
+% ====================
+\part{Anhang}
+\appendix
+
+\input{appendix/task-description}
+
+\input{appendix/class-diagrams}
+
+\input{appendix/sequence-diagrams}
+
+\input{appendix/test-reports}
+
+\input{appendix/metrics}
+
+\input{appendix/manual}
+
+\input{appendix/personal-reports}
+
+\input{appendix/time-report}
+
+\input{minutes/minutes}
+
+\backmatter
+
+% Bibliography
+% ====================
+\cleardoublepage
+\printbibliography[title={Literaturverzeichnis}]
+
+% Declarations
+% ====================
+\input{chapters/declarations}
+
+
+\end{document}
